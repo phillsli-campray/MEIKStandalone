@@ -398,7 +398,7 @@ namespace MEIKScreen
                     jObject["deviceid"] = App.reportSettingModel.DeviceNo;
                     jObject["description"] = item.Desc;
                     jObject["license"] = App.reportSettingModel.License;
-                    jObject["screentime"] = item.ScreenDate;
+                    jObject["screentime"] = item.ScreenDate;                    
                     jsonArr.Add(jObject);
                 }
                 if (jsonArr.Count > 0)
@@ -1131,6 +1131,7 @@ namespace MEIKScreen
                                 jObject["province"] = selectedUser.Province;
                                 jObject["zipcode"] = selectedUser.ZipCode;
                                 jObject["address"] = selectedUser.Address;
+                                jObject["free"] = selectedUser.Free;
                                 NameValueCollection nvlist=new NameValueCollection();
                                 nvlist.Add("jsonStr", jObject.ToString());
                                 string resStr=HttpWebTools.UploadFile(App.reportSettingModel.CloudPath + "/api/sendData", zipFile, nvlist, App.reportSettingModel.CloudToken);
