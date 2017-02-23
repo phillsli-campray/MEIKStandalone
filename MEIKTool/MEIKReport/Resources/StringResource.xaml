@@ -110,7 +110,7 @@
     <sys:String x:Key="Message_44">Failed to download the report file, Error Message:</sys:String>
     <sys:String x:Key="Message_45">Failed to receive the report data, Error Messages：</sys:String>
     <!--<sys:String x:Key="Message_46">Are you sure to update the software now? That will close the software, please save you data first.</sys:String>-->
-    <sys:String x:Key="Message_46">A new version is available, are you sure to update the software now?</sys:String>
+    <sys:String x:Key="Message_46">A new version of software is available, do you want to update now?</sys:String>
     <sys:String x:Key="Message_47">Failed to query the version information from server, Error Message:</sys:String>
     <sys:String x:Key="Message_48">Got the newer version successfully.</sys:String>
     <sys:String x:Key="Message_49">Password incorrect</sys:String>
@@ -536,9 +536,9 @@
     <sys:String x:Key="ReportContext_165" xml:space="preserve">Comments 01: </sys:String>
     
     <sys:String x:Key="ReportContext_228">No abnormal changes detected</sys:String>
-    <sys:String x:Key="ReportContext_166">No abnormal changes detected, (MEC)belong to high risk group</sys:String>
+    <sys:String x:Key="ReportContext_166">No abnormal changes detected, (MEC) belong to high risk group</sys:String>
     <sys:String x:Key="ReportContext_167">Benign lesion detected</sys:String>
-    <sys:String x:Key="ReportContext_229">Benign lesion detected, (MEC)belong to high risk group</sys:String>    
+    <sys:String x:Key="ReportContext_229">Benign lesion detected, (MEC) belong to high risk group</sys:String>    
     <sys:String x:Key="ReportContext_168">Suspicious abnormality detected</sys:String>
     <sys:String x:Key="ReportContext_230">Highly suspicious abnormality detected</sys:String>
     
@@ -609,7 +609,7 @@
     <sys:String x:Key="ReportContext_235" xml:space="preserve">Medical Interpreter's Signature</sys:String>
     <sys:String x:Key="ReportContext_236">Poor Image, need to re-screen</sys:String>
     <sys:String x:Key="ReportContext_237">Benign Changes</sys:String>
-    <sys:String x:Key="ReportContext_238">Benign Changes, (MEC)Belong to high risk group</sys:String>
+    <sys:String x:Key="ReportContext_238">Benign Changes, (MEC) belong to high risk group</sys:String>
     <sys:String x:Key="ReportContext_239">MEIK re-examination in 2 phase menstrual cycle</sys:String>
     <sys:String x:Key="ReportContext_240">Routine ultrasound</sys:String>
     <sys:String x:Key="ReportContext_241">Routine ultrasound &amp; mammography</sys:String>
