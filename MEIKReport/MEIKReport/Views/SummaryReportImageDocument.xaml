@@ -10,7 +10,7 @@
             <ColumnDefinition Width="*"/>            
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="986"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="5"/>
@@ -39,9 +39,8 @@
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="0.1*"/>
-                <RowDefinition Height="7"/>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="4*"/>                
+                <RowDefinition Height="7"/>                
+                <RowDefinition Height="4.4*"/>                
                 <RowDefinition Height="0.5*"/>
                 <RowDefinition Height="18*"/>
                 <RowDefinition Height="0.5*"/>                
@@ -77,12 +76,13 @@
             <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" >
                 <TextBlock Text="{StaticResource ReportContext_179}" VerticalAlignment="Center" FontWeight="Bold" FontSize="16" Margin="2,0,2,0"/>
                 <TextBlock Name="dataName" Text="{Binding DataName}" VerticalAlignment="Center" Width="310" FontWeight="Bold" FontSize="16"/>
-                <TextBlock Text="{StaticResource ReportContext_6}" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,2,0"/>
-                <TextBlock Name="dataScreenLocation" Text="{Binding DataScreenLocation}" VerticalAlignment="Center" Width="250" FontWeight="Bold"/>
+                
             </StackPanel>
             <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left" >
                 <TextBlock Text="{StaticResource ReportContext_177}" VerticalAlignment="Center" FontWeight="Bold" Margin="2,0,2,0"/>
                 <TextBlock Name="dataScreenDate" Text="{Binding DataScreenDate}" Width="255" VerticalAlignment="Center"/>
+                <TextBlock Text="{StaticResource ReportContext_242}" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,2,0"/>
+                <TextBlock Name="dataScreenLocation" Text="{Binding DataScreenLocation}" VerticalAlignment="Center" Width="240" FontWeight="Bold"/>
             </StackPanel>
             <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Left" >
                 <TextBlock Text="{StaticResource ReportContext_178}" VerticalAlignment="Center" FontWeight="Bold" Margin="2,0,2,0"/>
@@ -167,39 +167,33 @@
             </StackPanel>
             <Border Grid.Row="19" BorderBrush="Black" BorderThickness="0,1,0,2">
             </Border>
-            <StackPanel Grid.Row="20" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-                <TextBlock Text="{StaticResource ReportContext_190}" Margin="80,0,10,0" FontWeight="Bold" VerticalAlignment="Center"/>
-                <Border Width="200" Height="26" BorderBrush="Black" BorderThickness="0,0,0,1" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <TextBlock Name="dataSignDate" Text="{Binding DataSignDate}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="14" TextAlignment="Left"/>
-                </Border>
-            </StackPanel>
-            
-            <Grid Grid.Row="21">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <TextBlock Text="{StaticResource ReportContext_191}" Margin="80,0,10,0" FontWeight="Bold" VerticalAlignment="Center"/>
-                    <TextBlock Name="dataMeikTech" Text="{Binding DataMeikTech}" Width="260"  VerticalAlignment="Center"/>
+
+            <WrapPanel Grid.Row="20" Margin="0,10,0,0" VerticalAlignment="Bottom">
+                <StackPanel Name="techSignPanel" Height="20" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBlock Text="{StaticResource ReportContext_191}" Margin="20,0,10,0" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <TextBlock Name="dataMeikTech" Text="{Binding DataMeikTech}" Width="200"  VerticalAlignment="Center"/>
+                    <TextBlock Text="{StaticResource ReportContext_200}"  FontWeight="Bold"  VerticalAlignment="Center" Margin="0,0,10,0"/>
+                    <TextBlock Name="dataTechLicenseNo" Text="{Binding DataTechLicense}" Width="200"  VerticalAlignment="Center"/>
                 </StackPanel>
-                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <TextBlock Text="{StaticResource ReportContext_173}" Margin="80,0,10,0" FontWeight="Bold" VerticalAlignment="Center"/>
-                    <TextBlock Name="dataDoctor" Text="{Binding DataDoctor}" Width="220"  VerticalAlignment="Center"/>
+                <StackPanel Name="doctorSignPanel" Height="20" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBlock Text="{StaticResource ReportContext_173}" Margin="20,0,10,0" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <TextBlock Name="dataDoctor" Text="{Binding DataDoctor}" Width="187"  VerticalAlignment="Center"/>
+                    <TextBlock Text="{StaticResource ReportContext_200}"  FontWeight="Bold"  VerticalAlignment="Center" Margin="0,0,10,0"/>
+                    <TextBlock Name="dataDoctorLicenseNo" Text="{Binding DataDoctorLicense}" Width="200"  VerticalAlignment="Center"/>
                 </StackPanel>
-                <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Name="signPanel" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="35,0,0,0">
-                    <Image Name="dataSignImg" Height="48" Width="250"/>
-                </Grid>
-                <Border Grid.Row="2" Grid.Column="1" Width="250" BorderBrush="Black" BorderThickness="0,1,0,0" Margin="35,0,0,0">
-                    <TextBlock Grid.Row="2" Text="{StaticResource ReportContext_235}" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
-                </Border>
-            </Grid>            
-            <WrapPanel  Grid.Row="23" Margin="2,0,2,0">                                                
+                <StackPanel Height="50" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBlock Text="{StaticResource ReportContext_190}" Margin="20,0,10,0" FontWeight="Bold" VerticalAlignment="Bottom"/>
+                    <Border Width="170" BorderBrush="Black" BorderThickness="0,0,0,1">
+                        <TextBlock Name="dataSignDate" Text="{Binding DataSignDate}" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="14" TextAlignment="Left"/>
+                    </Border>
+                    <TextBlock Text="{StaticResource ReportContext_235}" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontWeight="Bold" Margin="30,0,0,0"/>
+                    <Border Width="250" BorderBrush="Black" BorderThickness="0,0,0,1">
+                        <Image Name="dataSignImg" Height="48" Width="250"/>
+                    </Border>
+                </StackPanel>
+
+            </WrapPanel>
+            <WrapPanel  Grid.Row="22" Margin="2,0,2,0">                                                
                 <StackPanel Height="26" Orientation="Horizontal" HorizontalAlignment="Left" >
                     <TextBlock Text="{StaticResource ReportContext_193}" Width="700" TextWrapping="Wrap" Foreground="#415661" FontSize="10"/>
                 </StackPanel>
