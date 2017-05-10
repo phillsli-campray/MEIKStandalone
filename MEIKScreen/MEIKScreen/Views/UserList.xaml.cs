@@ -620,7 +620,7 @@ namespace MEIKScreen
                             string ultrasound = "Ultrasound";
                             string mammography = "Mammography";
                             string biopsy = "Biopsy";
-                            //string histology = "Histology";                            
+                            string histology = "Histology";                            
 
                             //Personal Data
                             person.ClientNumber = OperateIniFile.ReadIniData(personalData, "clientnumber", "", NextFile.FullName);
@@ -1118,13 +1118,11 @@ namespace MEIKScreen
                             if (App.reportSettingModel.TransferMode == TransferMode.CloudServer)
                             {
                                 JObject jObject = new JObject();
-                                jObject["clientnumber"] = selectedUser.ClientNumber;
-                                jObject["cid"] = selectedUser.Cid;
                                 jObject["code"] = selectedUser.Code;
                                 jObject["firstname"] = selectedUser.GivenName;
                                 jObject["lastname"] = selectedUser.SurName;
                                 jObject["othername"] = selectedUser.OtherName;
-                                jObject["birthday"] = selectedUser.BirthYear + "/" + selectedUser.BirthMonth.PadLeft(2, '0') + "/" + selectedUser.BirthDate.PadLeft(2, '0');
+                                jObject["birthday"] = selectedUser.BirthYear + "/" + selectedUser.BirthMonth + "/" + selectedUser.BirthDate;
                                 jObject["mobile"] = selectedUser.Mobile;
                                 jObject["email"] = selectedUser.Email;
                                 jObject["clientnumber"] = selectedUser.ClientNumber;
@@ -1942,21 +1940,7 @@ namespace MEIKScreen
             }
         }
 
-        private void btnReceiveClient_Click(object sender, RoutedEventArgs e)
-        {
-            if (string.IsNullOrEmpty(App.reportSettingModel.CloudUser) || string.IsNullOrEmpty(App.reportSettingModel.CloudToken))
-            {
-                LoginPage loginPage = new LoginPage();
-                var loginResult = loginPage.ShowDialog();
-                if (!loginResult.HasValue || !loginResult.Value)
-                {
-                    return;
-                }
-            }
-            SearchClient searchClient = new SearchClient();
-            searchClient.Owner = this;
-            searchClient.ShowDialog();
-        }
+
         
         /// <summary>
         /// 添加新的档案文件夹
@@ -3949,7 +3933,8 @@ namespace MEIKScreen
             catch { }
         } 
 
-        #endregion        
+        #endregion
+
         
     }
 }

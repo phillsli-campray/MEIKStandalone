@@ -11,7 +11,6 @@
     <sys:String x:Key="MainWinDeviceNo">設備編號: </sys:String>
     <sys:String x:Key="MainWinMenuReceive">接收數據</sys:String>
     <sys:String x:Key="MainWinMenuReceiveReport">接收報告</sys:String>
-    <sys:String x:Key="MainWinMenuReceiveClient">搜索客戶</sys:String>
     
     <sys:String x:Key="CommonExitBtn">退出</sys:String>
     <sys:String x:Key="CommonPreviewBtn">預覽</sys:String>
@@ -62,11 +61,6 @@
     <sys:String x:Key="Dialog6">創建</sys:String>
     <sys:String x:Key="Dialog7">取消</sys:String>
     <sys:String x:Key="Dialog8">檢測員:</sys:String>
-    <sys:String x:Key="Dialog9">手機號碼:</sys:String>
-    <sys:String x:Key="Dialog10">電郵地址:</sys:String>
-    <sys:String x:Key="Dialog11">客戶編號</sys:String>
-    <sys:String x:Key="Dialog12">搜索客戶</sys:String>
-    <sys:String x:Key="Dialog13">重置</sys:String>
 
     <sys:String x:Key="Message_1">啟動MEIK v5.6程序失敗，錯誤信息：</sys:String>
     <sys:String x:Key="Message_2">保存報告數據成功!</sys:String>
@@ -154,7 +148,6 @@
     <sys:String x:Key="Message_84">請先輸入一個設備編號.</sys:String>
     <sys:String x:Key="Message_85">請選擇這臺設備的檢測報告所用的logo</sys:String>
     <sys:String x:Key="Message_86">已經添加了此設備的logo記錄.</sys:String>
-    <sys:String x:Key="Message_87">請輸入至少一個搜索字段的值.</sys:String>
 
     <sys:String x:Key="UserListWinBrowerLab">選擇客戶檔案</sys:String>
     <sys:String x:Key="UserListWinBrowerBtn">瀏覽...</sys:String>

@@ -43,24 +43,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="300"/>                
             </Grid.ColumnDefinitions>
-            <WrapPanel VerticalAlignment="Center" Margin="30,0,0,0">
-                <Button Name="btnReceiveClient" Content="{DynamicResource  MainWinMenuReceiveClient}" Height="85" Width="120"  FontFamily="Arial,Microsoft YaHei" FontSize="15" FontWeight="Bold"  Foreground="White" Cursor="Hand" Click="btnReceiveClient_Click" >
-                    <Button.Template>
-                        <ControlTemplate TargetType="{x:Type Button}">
-                            <StackPanel Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" HorizontalAlignment="Center" VerticalAlignment="Top" OpacityMask="#FFE81717">
-                                <Image Name="btnBG" Source="/Images/receive.png" Stretch="None" Width="auto" Height="auto" HorizontalAlignment="Center"/>
-                                <!--<ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="{TemplateBinding Content}"></ContentPresenter>-->
-                                <Label Name="btnTxt" Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" FontWeight="{TemplateBinding FontWeight}" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"></Label>
-                            </StackPanel>
-                            <ControlTemplate.Triggers>
-                                <Trigger Property="Button.IsMouseOver" Value="True">
-                                    <Setter Property="Source" Value="/Images/receive_hover.png" TargetName="btnBG"/>
-                                    <Setter Property="Foreground" Value="#40c4e4" TargetName="btnTxt"/>
-                                </Trigger>
-                            </ControlTemplate.Triggers>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
+            <WrapPanel VerticalAlignment="Center" Margin="30,0,0,0">                
                 <Button Name="btnScreening"  Content="{DynamicResource  MainWinMenuScreening}" Height="85" Width="110" FontWeight="Bold" VerticalContentAlignment="Top" VerticalAlignment="Top" HorizontalContentAlignment="Center"  FontFamily="Arial,Microsoft YaHei" FontSize="15" Click="btnScreening_Click"  Foreground="White" Cursor="Hand">                                     
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
@@ -129,7 +112,6 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                
             </WrapPanel>
             <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
                 <Grid.RowDefinitions>
