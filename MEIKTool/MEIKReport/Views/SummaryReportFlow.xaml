@@ -214,7 +214,7 @@
                                         <TextBlock Text="綠色標誌" Foreground="Green"></TextBlock>
                                         <TextBlock Text="表示輕微電阻值改變，"></TextBlock>
                                         <TextBlock Text="紅色標誌" Foreground="Red"></TextBlock>
-                                        <TextBlock Text="表示相對大電陰值改變。"></TextBlock>
+                                        <TextBlock Text="表示相對大電阻值改變。"></TextBlock>
                                     </WrapPanel>
                                     <WrapPanel Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
                                         <TextBlock Text="Screen image-"></TextBlock>
@@ -357,7 +357,7 @@
                         <Grid Width="692">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*"></RowDefinition>
-                                <RowDefinition Height="740"></RowDefinition>                                
+                                <RowDefinition Height="702"></RowDefinition>                                
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="144"></ColumnDefinition>
@@ -371,7 +371,7 @@
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="18"></RowDefinition>
                                         <RowDefinition Height="10"></RowDefinition>
-                                        <RowDefinition Height="156"></RowDefinition>
+                                        <RowDefinition Height="118"></RowDefinition>
                                         <RowDefinition Height="5"></RowDefinition>
                                         <RowDefinition Height="18"></RowDefinition>
                                         <RowDefinition Height="458"></RowDefinition>
@@ -398,7 +398,7 @@
                                             <TextBlock Name="dataRightMeanECOfLesion" Text="{Binding DataRightMeanECOfLesion}" Margin="5,0,0,0"/>
                                         </WrapPanel>
                                     </StackPanel>                                                                                                                                            
-                                    <Grid Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center">
+                                    <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" HorizontalAlignment="Center">
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="1.4*"/>
                                             <RowDefinition Height="*"/>
@@ -415,8 +415,8 @@
                                         </Grid.ColumnDefinitions>
                                         <Border  Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="1,1,1,1" Background="#FF35A2B4">
                                             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                                                <TextBlock Text="年齡" FontSize="8" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                                                <TextBlock Text="Age" FontSize="8" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                                                <TextBlock Text="年齡" FontSize="7" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                                                <TextBlock Text="Age" FontSize="7" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                                             </StackPanel>
                                         </Border>
                                         <Border Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="0,1,1,1" Background="#FF35A2B4">
@@ -425,41 +425,41 @@
                                                 <TextBlock Text="*Mean Electrical Conductivity Normal Range" FontSize="8" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                                             </StackPanel>
                                         </Border>                                        
-                                        <Border  Grid.Row="1" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1">
-                                            <Label Content="&lt;29" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                        <Border  Grid.Row="1" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1" VerticalAlignment="Center">
+                                            <Label Content="&lt;29" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
                                         </Border>
-                                        <Border  Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
-                                            <Label Content="0.18 - 0.44" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                        <Border  Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1" VerticalAlignment="Center">
+                                            <Label Content="0.18 - 0.44" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
                                         </Border>
                                         <Border  Grid.Row="2" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1">
-                                            <Label Content="30-39" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                            <Label Content="30-39" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
                                         </Border>
                                         <Border  Grid.Row="2" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
-                                            <Label Content="0.16 - 0.53" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                            <Label Content="0.16 - 0.53" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
                                         </Border>
                                         <Border  Grid.Row="3" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1">
-                                            <Label Content="40-49" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                            <Label Content="40-49" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
                                         </Border>
                                         <Border  Grid.Row="3" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
-                                            <Label Content="0.22 - 0.63" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                            <Label Content="0.22 - 0.63" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
                                         </Border>
                                         <Border  Grid.Row="4" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1">
-                                            <Label Content="50-59" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                            <Label Content="50-59" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
                                         </Border>
                                         <Border  Grid.Row="4" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
-                                            <Label Content="0.32 - 0.72" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                            <Label Content="0.32 - 0.72" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
                                         </Border>
                                         <Border  Grid.Row="5" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1">
-                                            <Label Content="60-69" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                            <Label Content="60-69" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
                                         </Border>
                                         <Border  Grid.Row="5" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
-                                            <Label Content="0.43 - 0.78" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                            <Label Content="0.43 - 0.78" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
                                         </Border>
                                         <Border  Grid.Row="6" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1">
-                                            <Label Content="&gt;70" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                            <Label Content="&gt;70" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
                                         </Border>
                                         <Border  Grid.Row="6" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
-                                            <Label Content="0.50 - 0.64" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                            <Label Content="0.50 - 0.64" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
                                         </Border>
 
                                     </Grid>
@@ -848,7 +848,7 @@
                         <Grid Width="692">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*"></RowDefinition>
-                                <RowDefinition Height="110"></RowDefinition>
+                                <RowDefinition Height="148"></RowDefinition>
                                 <RowDefinition Height="19"></RowDefinition>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
@@ -864,6 +864,8 @@
                                         <RowDefinition Height="16"></RowDefinition>
                                         <RowDefinition Height="16"></RowDefinition>
                                         <RowDefinition Height="16"></RowDefinition>
+                                        <RowDefinition Height="16"></RowDefinition>
+                                        <RowDefinition Height="16"></RowDefinition>
                                         <RowDefinition Height="10"></RowDefinition>
                                         <RowDefinition Height="16"></RowDefinition>
                                         <RowDefinition Height="1"></RowDefinition>
@@ -874,12 +876,18 @@
                                         <TextBlock Name="dataTotalPts" Text="{Binding DataTotalPts}"/>
                                     </WrapPanel>
                                     <WrapPanel Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center">
-                                        <TextBlock Text="結果分析 Result Analysis: "></TextBlock>
-                                        <TextBlock Name="dataConclusion" Text="{Binding DataConclusion}"/>
+                                        <TextBlock Text="結果分析 Result Analysis: " Width="140"></TextBlock>
+                                        <TextBlock Name="dataConclusion" Text="{Binding DataConclusion}"/>                                        
                                     </WrapPanel>
                                     <WrapPanel Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center">
-                                        <TextBlock Text="建議覆檢 Suggestion Re-examination: "></TextBlock>
-                                        <TextBlock Name="dataRecommendation" Text="{Binding DataRecommendation}"/>
+                                        <TextBlock Name="dataConclusionEN" Text="{Binding DataConclusion2}" Margin="140,0,0,0"/>
+                                    </WrapPanel>
+                                    <WrapPanel Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Text="建議覆檢 Suggestion Re-examination: " Width="205"></TextBlock>
+                                        <TextBlock Name="dataRecommendation" Text="{Binding DataRecommendation}"/>                                        
+                                    </WrapPanel>
+                                    <WrapPanel Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Name="dataRecommendationEN" Text="{Binding DataComments}" Margin="205,0,0,0"/>
                                     </WrapPanel>
                                     <WrapPanel Visibility="Collapsed" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" >
                                         <TextBlock Text="深入檢查 Futher examination: "></TextBlock>
@@ -895,13 +903,13 @@
                                             <TextBlock Grid.Column="1" Name="dataComments" Text="{Binding DataComments}" TextWrapping="Wrap" />
                                         </Grid>
                                     </WrapPanel>
-                                    <TextBlock Name="dataSignDate" Grid.Row="4" Text="{Binding DataSignDate}"  Width="150" Padding="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                                    <TextBlock Grid.Row="5" Height="1" Background="Black" Width="150" Padding="0,0,10,0" HorizontalAlignment="Right"></TextBlock>
-                                    <TextBlock Grid.Row="6" Text="日期 Date"  Width="150" Padding="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>                                    
+                                    <TextBlock Name="dataSignDate" Grid.Row="6" Text="{Binding DataSignDate}"  Width="150" Padding="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                                    <TextBlock Grid.Row="7" Height="1" Background="Black" Width="150" Padding="0,0,10,0" HorizontalAlignment="Right"></TextBlock>
+                                    <TextBlock Grid.Row="8" Text="日期 Date"  Width="150" Padding="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>                                    
                                 </Grid>
                             </Border>
-                            <Canvas Grid.Row="1"  Grid.Column="1" Margin="320,5,160,5">
-                                <Image Width="100" Height="100" Name="sealCanvas" Source="{x:Null}" />
+                            <Canvas Grid.Row="1"  Grid.Column="1" Margin="340,5,160,5">
+                                <Image Width="120" Height="120" Name="sealCanvas" Source="{x:Null}" />
                             </Canvas>
                             <StackPanel Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" Width="692">
                                 <TextBlock Text="續下頁 Continued on next page   P.2/4" HorizontalAlignment="Right" Padding="0,5,0,0"></TextBlock>
@@ -975,7 +983,7 @@
                 <TableCell>
                     <Paragraph TextAlignment="Left">
                         <TextBlock Height="15" Text="多謝閣下選用《MEIK® 快速乳房健康檢測》服務。此為閣下的檢測報告。"></TextBlock>
-                        <TextBlock Height="15" Text="請注意，此報告内容供專業醫生參考，不應作為诊断結果。關於閣下乳房健康情況的任何進一步疑問，請向相關醫生查詢。" Foreground="#FF35A2B4" TextWrapping="Wrap"></TextBlock>                        
+                        <TextBlock Height="15" Text="請注意，此報告内容只供專業醫生參考，不應作為诊断結果。關於閣下乳房健康情況的任何進一步疑問，請向相關醫生查詢。" Foreground="#FF35A2B4" TextWrapping="Wrap"></TextBlock>                        
                     </Paragraph>
                 </TableCell>
             </TableRow>
@@ -1216,7 +1224,7 @@
             </TableRow>
         </TableRowGroup>
     </Table>
-    <Table Padding="50,201,50,0">
+    <Table Padding="50,204,50,0">
         <TableRowGroup>
             <TableRow>
                 <TableCell>

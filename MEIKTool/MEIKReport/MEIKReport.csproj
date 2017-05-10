@@ -351,6 +351,9 @@
     <Resource Include="Images\delete.png" />
     <Resource Include="Images\delete_hover.png" />
     <Resource Include="Images\small_breast.png" />
+    <Resource Include="Images\sort_asc.png" />
+    <Resource Include="Images\sort_desc.png" />
+    <Resource Include="Images\sort_normal.png" />
     <Content Include="Xceed.Wpf.Toolkit.dll" />
     <Resource Include="Images\A4-bg.png" />
     <Resource Include="Images\App_Icon.png" />

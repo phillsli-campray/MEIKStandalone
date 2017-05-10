@@ -10,6 +10,12 @@ namespace MEIKScreen.Model
             set { clientNumber = value; OnPropertyChanged("ClientNumber"); }
         }
 
+        private string cid;
+        public string Cid
+        {
+            get { return cid; }
+            set { cid = value; }
+        }
         private string archiveFolder;
         private string crdFilePath;
         private string iniFilePath;

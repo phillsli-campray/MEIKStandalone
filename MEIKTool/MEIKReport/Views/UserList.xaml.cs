@@ -341,7 +341,7 @@ namespace MEIKReport
                 //遍历指定文件夹下所有文件
                 HandleFolder(folderName,ref set);
 
-                customerSource.Source = set;
+                customerSource.Source = set.OrderByDescending(x=>x.Code);
                 if (set.Count > 0)
                 {
                     reportButtonPanel.Visibility = Visibility.Visible;                    
@@ -3128,6 +3128,31 @@ namespace MEIKReport
             catch { }   
         }
 
+        private void imgSort_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                CollectionViewSource customerSource = (CollectionViewSource)this.FindResource("CustomerSource");
+                var set = customerSource.Source as IOrderedEnumerable<Person>;
+                if (imgSort.Tag.Equals("desc"))
+                {
+                    customerSource.Source = set.OrderBy(x => x.Code);                    
+                    imgSort.Tag = "asc";
+                    imgSort.Source = new BitmapImage(new Uri("/Images/sort_asc.png", UriKind.Relative));
+                    imgSort.ToolTip = "Asc";
+                }
+                else
+                {
+                    customerSource.Source = set.OrderByDescending(x => x.Code);
+                    imgSort.Tag = "desc";
+                    imgSort.Source = new BitmapImage(new Uri("/Images/sort_desc.png", UriKind.Relative));
+                    imgSort.ToolTip = "Desc";
+                }
+                
+            }
+            catch (Exception ex) { var a=ex.Message; }
+        }
+
         private bool isHighLight = false;
         private void Clock_MouseUp(object sender, MouseButtonEventArgs e)
         {
@@ -4284,7 +4309,7 @@ namespace MEIKReport
                 else if (comboBox.SelectedIndex == 2)
                 {
                     LoadDataModel();
-                    var reportModel = CloneReportModel();
+                    var reportModel = CloneClientReportModel();
                     PrintPreviewWindow previewWnd = new PrintPreviewWindow("Views/SummaryReportFlow.xaml", false, reportModel);
                     previewWnd.Owner = this;
                     previewWnd.ShowInTaskbar = false;
@@ -5098,6 +5123,246 @@ namespace MEIKReport
             return reportModel;
         }
 
+        private ShortFormReport CloneClientReportModel()
+        {
+            ShortFormReport reportModel = shortFormReportModel.Clone();
+            reportModel = shortFormReportModel.Clone();
+            //reportModel.DataGender = this.dataGender.Text;
+            //reportModel.DataWeightUnit = this.dataWeightUnit.Text;
+            reportModel.DataMenstrualCycle = this.dataMenstrualCycle.Text;
+            reportModel.DataSkinAffections = this.dataSkinAffections.Text;
+            //reportModel.DataPertinentHistory = this.dataPertinentHistory.Text;
+            //reportModel.DataMotherUltra = this.dataMotherUltra.Text;
+            //reportModel.DataLeftPalpableMass = this.dataLeftPalpableMass.Text;
+            //reportModel.DataRightPalpableMass = this.dataRightPalpableMass.Text;
+
+            reportModel.DataLeftBreastAP = this.dataLeftBreastAP.Text;
+            reportModel.DataRightBreastAP = this.dataRightBreastAP.Text;
+            reportModel.DataLeftBreast = this.dataLeftBreastH.Text + ":" + this.dataLeftBreastM.Text + " " + this.dataLeftBreastAP.Text;
+            reportModel.DataRightBreast = this.dataLeftBreastH.Text + ":" + this.dataRightBreastM.Text + " " + this.dataRightBreastAP.Text;
+
+            reportModel.DataLeftChangesOfElectricalConductivity = this.dataLeftChangesOfElectricalConductivity.Text;
+            reportModel.DataRightChangesOfElectricalConductivity = this.dataRightChangesOfElectricalConductivity.Text;
+            reportModel.DataLeftMammaryStruct = this.dataLeftMammaryStruct.Text;
+            reportModel.DataRightMammaryStruct = this.dataRightMammaryStruct.Text;
+            reportModel.DataLeftLactiferousSinusZone = this.dataLeftLactiferousSinusZone.Text;
+            reportModel.DataRightLactiferousSinusZone = this.dataRightLactiferousSinusZone.Text;
+            reportModel.DataLeftMammaryContour = this.dataLeftMammaryContour.Text;
+            reportModel.DataRightMammaryContour = this.dataRightMammaryContour.Text;
+            reportModel.DataLeftNumber = this.dataLeftNumber.Text;
+            reportModel.DataRightNumber = this.dataRightNumber.Text;
+
+            reportModel.DataLeftLocation = this.dataLeftLocation.Text;
+            reportModel.DataRightLocation = this.dataRightLocation.Text;
+            reportModel.DataLeftLocation2 = this.dataLeftLocation2.Text;
+            reportModel.DataRightLocation2 = this.dataRightLocation2.Text;
+            reportModel.DataLeftLocation3 = this.dataLeftLocation3.Text;
+            reportModel.DataRightLocation3 = this.dataRightLocation3.Text;
+
+            reportModel.DataLeftSize = string.IsNullOrEmpty(this.dataLeftSize.Text) ? "" : this.dataLeftSize.Text + " mm";
+            reportModel.DataRightSize = string.IsNullOrEmpty(this.dataRightSize.Text) ? "" : this.dataRightSize.Text + " mm";
+            reportModel.DataLeftSize2 = string.IsNullOrEmpty(this.dataLeftSize2.Text) ? "" : this.dataLeftSize2.Text + " mm";
+            reportModel.DataRightSize2 = string.IsNullOrEmpty(this.dataRightSize2.Text) ? "" : this.dataRightSize2.Text + " mm";
+            reportModel.DataLeftSize3 = string.IsNullOrEmpty(this.dataLeftSize3.Text) ? "" : this.dataLeftSize3.Text + " mm";
+            reportModel.DataRightSize3 = string.IsNullOrEmpty(this.dataRightSize3.Text) ? "" : this.dataRightSize3.Text + " mm";
+
+            reportModel.DataLeftShape = getSharpStr(reportModel.DataLeftShape);
+            reportModel.DataRightShape = getSharpStr(reportModel.DataRightShape);
+            reportModel.DataLeftShape2 = getSharpStr(reportModel.DataLeftShape2);
+            reportModel.DataRightShape2 = getSharpStr(reportModel.DataRightShape2);
+            reportModel.DataLeftShape3 = getSharpStr(reportModel.DataLeftShape3);
+            reportModel.DataRightShape3 = getSharpStr(reportModel.DataRightShape3);
+
+            reportModel.DataLeftContourAroundFocus = this.dataLeftContourAroundFocus.Text;
+            reportModel.DataRightContourAroundFocus = this.dataRightContourAroundFocus.Text;
+            reportModel.DataLeftContourAroundFocus2 = this.dataLeftContourAroundFocus2.Text;
+            reportModel.DataRightContourAroundFocus2 = this.dataRightContourAroundFocus2.Text;
+            reportModel.DataLeftContourAroundFocus3 = this.dataLeftContourAroundFocus3.Text;
+            reportModel.DataRightContourAroundFocus3 = this.dataRightContourAroundFocus3.Text;
+
+            reportModel.DataLeftInternalElectricalStructure = this.dataLeftInternalElectricalStructure.Text;
+            reportModel.DataRightInternalElectricalStructure = this.dataRightInternalElectricalStructure.Text;
+            reportModel.DataLeftInternalElectricalStructure2 = this.dataLeftInternalElectricalStructure2.Text;
+            reportModel.DataRightInternalElectricalStructure2 = this.dataRightInternalElectricalStructure2.Text;
+            reportModel.DataLeftInternalElectricalStructure3 = this.dataLeftInternalElectricalStructure3.Text;
+            reportModel.DataRightInternalElectricalStructure3 = this.dataRightInternalElectricalStructure3.Text;
+
+            reportModel.DataLeftSurroundingTissues = this.dataLeftSurroundingTissues.Text;
+            reportModel.DataRightSurroundingTissues = this.dataRightSurroundingTissues.Text;
+            reportModel.DataLeftSurroundingTissues2 = this.dataLeftSurroundingTissues2.Text;
+            reportModel.DataRightSurroundingTissues2 = this.dataRightSurroundingTissues2.Text;
+            reportModel.DataLeftSurroundingTissues3 = this.dataLeftSurroundingTissues3.Text;
+            reportModel.DataRightSurroundingTissues3 = this.dataRightSurroundingTissues3.Text;
+
+            reportModel.DataLeftOncomarkerHighlightBenignChanges = this.dataLeftOncomarkerHighlightBenignChanges.Text;
+            reportModel.DataRightOncomarkerHighlightBenignChanges = this.dataRightOncomarkerHighlightBenignChanges.Text;
+            reportModel.DataLeftOncomarkerHighlightSuspiciousChanges = this.dataLeftOncomarkerHighlightSuspiciousChanges.Text;
+            reportModel.DataRightOncomarkerHighlightSuspiciousChanges = this.dataRightOncomarkerHighlightSuspiciousChanges.Text;
+            reportModel.DataMeanElectricalConductivity3 = this.dataMeanElectricalConductivity3.Text;
+            reportModel.DataComparativeElectricalConductivity3 = this.dataComparativeElectricalConductivity3.Text;
+            reportModel.DataDivergenceBetweenHistograms3 = this.dataDivergenceBetweenHistograms3.Text;
+            reportModel.DataLeftAgeElectricalConductivity = this.dataLeftAgeElectricalConductivity.Text;
+            reportModel.DataRightAgeElectricalConductivity = this.dataRightAgeElectricalConductivity.Text;
+            //reportModel.DataAgeValueOfEC = this.dataAgeValueOfEC.Text;
+            reportModel.DataExamConclusion = this.dataExamConclusion.Text;
+            reportModel.DataLeftMammaryGland = this.dataLeftMammaryGland.Text;
+            reportModel.DataLeftAgeRelated = this.dataLeftAgeRelated.Text;
+            //reportModel.DataLeftFindings = this.dataLeftFindings.Text;
+            reportModel.DataLeftMammaryGlandResult = this.dataLeftMammaryGlandResult.Text;
+            reportModel.DataRightMammaryGland = this.dataRightMammaryGland.Text;
+            reportModel.DataRightAgeRelated = this.dataRightAgeRelated.Text;
+            //reportModel.DataRightFindings = this.dataRightFindings.Text;
+            reportModel.DataRightMammaryGlandResult = this.dataRightMammaryGlandResult.Text;
+            reportModel.DataTotalPts = this.dataTotalPts.Text;
+            //reportModel.DataLeftTotalPts = this.dataLeftTotalPts.Text;
+            //reportModel.DataRightTotalPts = this.dataRightTotalPts.Text;
+            //reportModel.DataPoint = this.dataPoint.Text;
+
+            reportModel.DataBiRadsCategory = this.dataBiRadsCategory.Text;
+
+            if (this.dataBiRadsCategory.Text.StartsWith("0"))
+            {
+                reportModel.DataPoint = "";
+            }
+            else if (this.dataBiRadsCategory.Text.StartsWith("1"))
+            {
+                reportModel.DataPoint = App.Current.FindResource("ReportContext_144").ToString();
+            }
+            else if (this.dataBiRadsCategory.Text.StartsWith("2"))
+            {
+                reportModel.DataPoint = App.Current.FindResource("ReportContext_145").ToString();
+            }
+            else if (this.dataBiRadsCategory.Text.StartsWith("3"))
+            {
+                reportModel.DataPoint = App.Current.FindResource("ReportContext_146").ToString();
+            }
+            else if (this.dataBiRadsCategory.Text.StartsWith("4"))
+            {
+                reportModel.DataPoint = App.Current.FindResource("ReportContext_147").ToString();
+            }
+            else if (this.dataBiRadsCategory.Text.StartsWith("5"))
+            {
+                reportModel.DataPoint = App.Current.FindResource("ReportContext_148").ToString();
+            }
+
+            reportModel.DataRecommendation = getCommentsStr(shortFormReportModel.DataRecommendation, true);
+            //暫時保存DataRecommendation字段的英文翻譯到reportModel.DataComments中（只針對ClientReport，因為ClientReport沒有顯示DataComments內容）
+            reportModel.DataComments = getCommentsStr(shortFormReportModel.DataRecommendation, false);
+
+            reportModel.DataConclusion = getAnalysisStr(shortFormReportModel.DataConclusion, true);
+            reportModel.DataConclusion2 = getAnalysisStr(shortFormReportModel.DataConclusion, false);
+            reportModel.DataFurtherExam = this.dataFurtherExam.Text;
+
+
+            return reportModel;
+        }
+
+        /// <summary>
+        /// 根据形状选项index获取对应的中英文字符串
+        /// </summary>
+        /// <param name="shapeIndex"></param>
+        /// <returns></returns>
+        private string getSharpStr(string shapeIndex)
+        {
+            string sharpStr = "";
+            switch (shapeIndex)
+            {
+                case "1":
+                    sharpStr = "圓形 Round";
+                    break;
+                case "2":
+                    sharpStr = "橢圓形 Oval";
+                    break;
+                case "3":
+                    sharpStr = "分葉狀 Lobular";
+                    break;
+                case "4":
+                    sharpStr = "不規則 Irregular";
+                    break;
+                default:                    
+                    break;
+
+            }
+            return sharpStr;
+        }
+
+        /// <summary>
+        /// 根据结果分析选项index获取对应的中英文字符串
+        /// </summary>
+        /// <param name="analysisIndex"></param>
+        /// <returns></returns>
+        private string getAnalysisStr(string analysisIndex, bool isChinese)
+        {
+            string analysisStr = "";
+            switch (analysisIndex)
+            {
+                case "1":
+
+                    analysisStr = isChinese ? "照片影像模糊, 需重新掃描" : "Poor Image, need to re-screen";
+                    break;
+                case "2":
+                    analysisStr = isChinese ? "沒有發現病理性改變" : "No abnormal changes detected";
+                    break;
+                case "3":
+                    analysisStr = isChinese ? "沒有發現病理性改變，（平均電導率）屬於高風險類型" : "No abnormal changes detected, (MEC) belong to high risk group";
+                    break;
+                case "4":
+                    analysisStr = isChinese ? "發現良性病理性改變" : "Benign Changes";
+                    break;
+                case "5":
+                    analysisStr = isChinese ? "發現良性病理性改變 – (平均電導率) 屬於高風險型" : "Benign Changes, (MEC) belong to high risk group";
+                    break;
+                case "6":
+                    analysisStr = isChinese ? "發現疑似良性病理性改變" : "Benign lesion detected";
+                    break;
+                case "7":
+                    analysisStr = isChinese ? "發現疑似良性病理性改變，（平均電導率）屬於高風險類型" : "Benign lesion detected, (MEC) belong to high risk group";
+                    break;
+                case "8":
+                    analysisStr = isChinese ? "發現可疑病理性改變" : "Suspicious abnormality detected";
+                    break;
+                case "9":
+                    analysisStr = isChinese ? "發現高度可疑病理性改變" : "Highly suspicious abnormality detected";
+                    break;
+                default:
+                    break;
+
+            }
+            return analysisStr;
+        }
+
+        /// <summary>
+        /// 根据建议选项index获取对应的中英文字符串
+        /// </summary>
+        /// <param name="analysisIndex"></param>
+        /// <returns></returns>
+        private string getCommentsStr(string commentsIndex,bool isChinese)
+        {
+            string commentsStr = "";
+            switch (commentsIndex)
+            {
+                case "1":
+                    commentsStr =isChinese ?  "在第1階段月經週期內進行MEIK檢查":"MEIK re-examination in 1 phase menstrual cycle";
+                    break;
+                case "2":
+                    commentsStr =isChinese ?  "在第2階段月經週期內進行MEIK檢查":"MEIK re-examination in 2 phase menstrual cycle";
+                    break;
+                case "3":
+                    commentsStr = isChinese ? "MEIK乳腺電阻抗檢測 (三月內)" : "MEIK examination in 3 months";
+                    break;
+                case "4":
+                    commentsStr = isChinese ? "MEIK乳腺電阻抗檢測 (六月內)" : "MEIK examination in 6 months";
+                    break;
+                case "5":
+                    commentsStr = isChinese ? "MEIK乳腺電阻抗檢測 (年度)" : "MEIK examination in 1 year";
+                    break;
+                default:
+                    break;
+
+            }
+            return commentsStr;
+        }
+
         public void ShowSignature(Object obj)
         {
             dataSignImg.Source = ImageTools.GetBitmapImage(AppDomain.CurrentDomain.BaseDirectory + "Signature" + System.IO.Path.DirectorySeparatorChar + "temp.jpg");
@@ -5139,7 +5404,9 @@ namespace MEIKReport
                 //    sfReportTempl = "Views/SummaryReportImageDocument.xaml";
                 //}
                 //ExportPDF(sfReportTempl, sfPdfFile, reportModel);
-                ExportFlowDocumentPDF(sfReportTempl, sfPdfFile, reportModel, "A4");
+
+                var clientReportModel = CloneClientReportModel();
+                ExportFlowDocumentPDF(sfReportTempl, sfPdfFile, clientReportModel, "A4");
                 //保存報表完成狀態
                 person.Status = "RD";
                 person.StatusText = App.Current.FindResource("CommonStatusReportDone").ToString();                
@@ -5869,6 +6136,11 @@ namespace MEIKReport
                 {
                     textBlock1.Text = reportModel.DataRecommendation;
                 }
+                textBlock1 = page.FindName("dataRecommendationEN") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataComments;
+                }
                 textBlock1 = page.FindName("dataFurtherExam") as TextBlock;
                 if (textBlock1 != null)
                 {
@@ -5878,6 +6150,11 @@ namespace MEIKReport
                 if (textBlock1 != null)
                 {
                     textBlock1.Text = reportModel.DataConclusion;
+                }
+                textBlock1 = page.FindName("dataConclusionEN") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataConclusion2;
                 }
                 textBlock1 = page.FindName("dataComments") as TextBlock;
                 if (textBlock1 != null)
@@ -6474,8 +6751,8 @@ namespace MEIKReport
                         //生成Summary报告的PDF文件
                         string sfPdfFile = folderName + System.IO.Path.DirectorySeparatorChar + person.Code + " SFI - " + strName;
                         string sfReportTempl = "Views/SummaryReportFlow.xaml";
-
-                        ExportFlowDocumentPDF(sfReportTempl, sfPdfFile, reportModel, "A4");
+                        var clientReportModel = CloneClientReportModel();
+                        ExportFlowDocumentPDF(sfReportTempl, sfPdfFile, clientReportModel, "A4");
 
                         MessageBox.Show(this, App.Current.FindResource("Message_5").ToString());
                     }

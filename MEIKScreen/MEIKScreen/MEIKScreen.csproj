@@ -110,6 +110,9 @@
     <Compile Include="Common\ComputerInfoTools.cs" />
     <Compile Include="Common\HttpWebTools.cs" />
     <Compile Include="Common\ReverseTypeConverter.cs" />
+    <Compile Include="Views\SearchClient.xaml.cs">
+      <DependentUpon>SearchClient.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AddFolderPage.xaml.cs">
       <DependentUpon>AddFolderPage.xaml</DependentUpon>
     </Compile>
@@ -182,6 +185,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Styles\ReportStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SearchClient.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

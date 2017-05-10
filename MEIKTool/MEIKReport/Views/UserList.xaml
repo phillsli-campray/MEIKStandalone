@@ -296,7 +296,8 @@
                 <StackPanel  VerticalAlignment="Center">
                     <TextBlock Text="{DynamicResource  ReportContext_178}" TextAlignment="Center" FontSize="12" FontWeight="Bold" Foreground="White"/>
                 </StackPanel>
-                <Image Name="imgChoice" Width="20" Height="20" Margin="15,0,0,0" HorizontalAlignment="Left" Source="/Images/multiple_choice.png" MouseUp="imgChoice_MouseUp" Cursor="Hand"/>
+                <Image Name="imgChoice" Width="20" Height="20" Margin="15,0,0,0" HorizontalAlignment="Left" Source="/Images/multiple_choice.png" MouseUp="imgSort_MouseUp" Cursor="Hand"/>
+                <Image Name="imgSort" ToolTip="Desc" Width="16" Height="16" Margin="280,0,0,0" HorizontalAlignment="Left" Tag="desc" Source="/Images/sort_desc.png" MouseUp="imgSort_MouseUp" Cursor="Hand"/>
             </Grid>
             <Grid Name="tabClientGroup" Grid.Row="1" Grid.Column="1" Background="#FF328787" MouseLeftButtonUp="tabClientGroup_MouseLeftButtonUp" >
                 <StackPanel  VerticalAlignment="Center">

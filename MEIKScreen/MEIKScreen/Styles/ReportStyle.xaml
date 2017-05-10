@@ -7,6 +7,29 @@
     <Style TargetType="{x:Type TextBlock  }">
         <Setter Property="FontFamily" Value="Arial,Microsoft YaHei" />
     </Style>
+
+    <!-- DataGrid 标题样式 -->
+    <Style x:Key="columnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="Height" Value="35" />
+        <Setter Property="Width" Value="auto" />
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="Background" Value="#4E87D4" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>        
+    </Style>
+    <!--DataGrid 单元格样式-->
+    <Style TargetType="DataGridCell">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="DataGridCell">
+                    <TextBlock TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" Height="auto" Padding="2">
+                           <ContentPresenter />
+                    </TextBlock>
+                </ControlTemplate>
+            </Setter.Value>            
+        </Setter>        
+    </Style>
+    
     
     <!--默认的按钮样式-->
     <Style TargetType="{x:Type Button}">
@@ -58,13 +81,7 @@
         <Setter Property="Background" Value="#4E87D4" />
     </Style>
 
-    <!-- DataGrid header style -->
-    <Style x:Key="columnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
-        <Setter Property="Height" Value="35" />
-        <Setter Property="Padding" Value="5" />
-        <Setter Property="Background" Value="#4E87D4" />
-        <Setter Property="Foreground" Value="White" />
-    </Style>
+    
 
     <!-- List header text style -->
     <Style x:Key="listHeaderTextStyle" TargetType="{x:Type Label}">
