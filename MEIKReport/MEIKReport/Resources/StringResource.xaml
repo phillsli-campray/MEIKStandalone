@@ -219,6 +219,8 @@
     <sys:String x:Key="SettingLogoDefault">Default</sys:String>
     <sys:String x:Key="SettingCompanyTitle">Company Info</sys:String>
     <sys:String x:Key="SettingUploadIcon">Company info for devices</sys:String>
+    <sys:String x:Key="SettingContactNumber">Contact Number: </sys:String>
+    <sys:String x:Key="SettingLeftLogo">Left Logo</sys:String>
 
     <sys:String x:Key="UserDataPersonalTab">Personal Data</sys:String>
     <sys:String x:Key="UserDataPersonal1">Last name:</sys:String>
@@ -523,7 +525,7 @@
     <sys:String x:Key="ReportContext_154">3 Category - Probably benign findings</sys:String>
     <sys:String x:Key="ReportContext_155">4 Category - Suspicious abnormality</sys:String>
     <sys:String x:Key="ReportContext_156">5 Category - Highly suggestive malignancy</sys:String>
-    <sys:String x:Key="ReportContext_157" xml:space="preserve">Suggestion: </sys:String>
+    <sys:String x:Key="ReportContext_157" xml:space="preserve">Recommendation: </sys:String>
     <sys:String x:Key="ReportContext_158">MEIK examination in 3 months</sys:String>
     <sys:String x:Key="ReportContext_159">MEIK examination in 6 months</sys:String>
     <sys:String x:Key="ReportContext_160">MEIK examination in 1 year</sys:String>
@@ -561,7 +563,7 @@
     <sys:String x:Key="ReportContext_186">Probably benign findings</sys:String>
     <sys:String x:Key="ReportContext_187">Suspicious abnormality</sys:String>
     <sys:String x:Key="ReportContext_188" xml:space="preserve">Location: </sys:String>
-    <sys:String x:Key="ReportContext_189" xml:space="preserve">Recommendation: </sys:String>
+    <sys:String x:Key="ReportContext_189" xml:space="preserve">Suggestion: </sys:String>
     <sys:String x:Key="ReportContext_190">Date of Interpretation：</sys:String>
     <sys:String x:Key="ReportContext_191" xml:space="preserve">MEIK Technician: </sys:String>
     <sys:String x:Key="ReportContext_192">Size:</sys:String>
@@ -613,4 +615,5 @@
     <sys:String x:Key="ReportContext_240">Routine ultrasound</sys:String>
     <sys:String x:Key="ReportContext_241">Routine ultrasound &amp; mammography</sys:String>
     <sys:String x:Key="ReportContext_242">Screen Location:</sys:String>
+    <sys:String x:Key="ReportContext_243">For further consultation pls. contact Nuvotek at {0} to make an appt.</sys:String>
 </ResourceDictionary>

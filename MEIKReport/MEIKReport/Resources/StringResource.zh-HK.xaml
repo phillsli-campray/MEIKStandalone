@@ -212,6 +212,8 @@
     <sys:String x:Key="SettingLogoSelect">選擇圖片...</sys:String>
     <sys:String x:Key="SettingLogoDefault">恢復默認</sys:String>
     <sys:String x:Key="SettingUploadIcon">設備所屬公司信息</sys:String>
+    <sys:String x:Key="SettingContactNumber">聯繫電話：</sys:String>
+    <sys:String x:Key="SettingLeftLogo">左端Logo</sys:String>
 
     <sys:String x:Key="UserDataPersonalTab">個人資料</sys:String>
     <sys:String x:Key="UserDataPersonal1">姓:</sys:String>
@@ -511,7 +513,7 @@
     <sys:String x:Key="ReportContext_154">3 類 - 疑似良性發現</sys:String>
     <sys:String x:Key="ReportContext_155">4 類 - 疑似惡性發現</sys:String>
     <sys:String x:Key="ReportContext_156">5 類 - 高度可能為惡性</sys:String>
-    <sys:String x:Key="ReportContext_157" xml:space="preserve">建議: </sys:String>
+    <sys:String x:Key="ReportContext_157" xml:space="preserve">深入檢查: </sys:String>
     <sys:String x:Key="ReportContext_158">MEIK乳腺電阻抗檢測 (三月內)</sys:String>
     <sys:String x:Key="ReportContext_159">MEIK乳腺電阻抗檢測 (六月內)</sys:String>
     <sys:String x:Key="ReportContext_160">MEIK乳腺電阻抗檢測 (年度)</sys:String>
@@ -525,8 +527,8 @@
 
     <sys:String x:Key="ReportContext_228">沒有發現病理性改變</sys:String>
     <sys:String x:Key="ReportContext_166">沒有發現病理性改變，（平均電導率）屬於高風險類型</sys:String>
-    <sys:String x:Key="ReportContext_167">發現良性病理性改變</sys:String>
-    <sys:String x:Key="ReportContext_229">發現良性病理性改變，（平均電導率）屬於高風險類型</sys:String>
+    <sys:String x:Key="ReportContext_167">發現疑似良性病理性改變</sys:String>
+    <sys:String x:Key="ReportContext_229">發現疑似良性病理性改變，（平均電導率）屬於高風險類型</sys:String>
     <sys:String x:Key="ReportContext_168">發現可疑病理性改變</sys:String>
     <sys:String x:Key="ReportContext_230">發現高度可疑病理性改變</sys:String>
     
@@ -551,7 +553,7 @@
     <sys:String x:Key="ReportContext_186">Probably benign findings</sys:String>
     <sys:String x:Key="ReportContext_187">疑似恶性变更</sys:String>-->
     <sys:String x:Key="ReportContext_188" xml:space="preserve">部位: </sys:String>
-    <sys:String x:Key="ReportContext_189" xml:space="preserve">深入檢查: </sys:String>
+    <sys:String x:Key="ReportContext_189" xml:space="preserve">建議: </sys:String>
     <sys:String x:Key="ReportContext_190">日期</sys:String>
     <sys:String x:Key="ReportContext_191" xml:space="preserve">MEIK檢測員: </sys:String>
     <sys:String x:Key="ReportContext_192" xml:space="preserve">大小: </sys:String>
@@ -597,9 +599,11 @@
     <sys:String x:Key="ReportContext_234">備註</sys:String>
     <sys:String x:Key="ReportContext_235" xml:space="preserve">醫生簽名</sys:String>
     <sys:String x:Key="ReportContext_236">照片影像模糊, 需重新掃描</sys:String>
-    <sys:String x:Key="ReportContext_237">發現疑似良性病理性改變</sys:String>
-    <sys:String x:Key="ReportContext_238">發現疑似良性病理性改變 – (平均電導率) 屬於高風險型</sys:String>
+    <sys:String x:Key="ReportContext_237">發現良性病理性改變</sys:String>
+    <sys:String x:Key="ReportContext_238">發現良性病理性改變 – (平均電導率) 屬於高風險型</sys:String>
     <sys:String x:Key="ReportContext_239">在第2階段月經週期內進行MEIK檢查</sys:String>
     <sys:String x:Key="ReportContext_240">超聲波檢測</sys:String>
     <sys:String x:Key="ReportContext_241">超聲波檢測和乳房X光照檢測</sys:String>
+    <sys:String x:Key="ReportContext_242">檢查地點:</sys:String>
+    <sys:String x:Key="ReportContext_243">需要了解更多的情況，請撥打諮詢電話：{0}</sys:String>
 </ResourceDictionary>

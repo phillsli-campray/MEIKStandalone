@@ -125,6 +125,7 @@ namespace MEIKReport
                     }
 
                     App.reportSettingModel.DefaultLogo =Convert.ToBoolean(OperateIniFile.ReadIniData("Report", "Use Default Logo", "true", System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini"));
+                    App.reportSettingModel.LeftLogo = Convert.ToBoolean(OperateIniFile.ReadIniData("Report", "Use Left Logo", "false", System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini"));
                     //App.reportSettingModel.ScreenVenue = OperateIniFile.ReadIniData("Report", "Screen Venue", "", System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini");
                     App.reportSettingModel.ShowDoctorSignature = Convert.ToBoolean(OperateIniFile.ReadIniData("Report", "Doctor Name Required", "true", System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini"));
                     //App.reportSettingModel.NoShowTechSignature = Convert.ToBoolean(OperateIniFile.ReadIniData("Report", "Hide Technician Signature", "false", System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini"));
@@ -138,6 +139,7 @@ namespace MEIKReport
                     pagesize = string.IsNullOrEmpty(pagesize) ? "Letter" : pagesize;
                     App.reportSettingModel.PrintPaper = (PageSize)Enum.Parse(typeof(PageSize), pagesize, true);
                     App.reportSettingModel.CompanyAddress = OperateIniFile.ReadIniData("Report", "Company Address", "", System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini");
+                    App.reportSettingModel.ContactNumber = OperateIniFile.ReadIniData("Report", "Contact Number", "", System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini");
 
                     App.reportSettingModel.MailAddress = OperateIniFile.ReadIniData("Mail", "My Mail Address", "", System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini");
                     App.reportSettingModel.ToMailAddress = OperateIniFile.ReadIniData("Mail", "To Mail Address", "", System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini");

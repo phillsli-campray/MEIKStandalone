@@ -236,11 +236,26 @@ namespace MEIKReport.Model
             set { defaultLogo = value; }
         }
 
+        //use default company logo
+        private bool leftLogo;
+        public bool LeftLogo
+        {
+            get { return leftLogo; }
+            set { leftLogo = value; }
+        }
+
         private string companyAddress;
         public string CompanyAddress
         {
             get { return companyAddress; }
             set { companyAddress = value; OnPropertyChanged("CompanyAddress"); }
+        }
+
+        private string contactNumber;
+        public string ContactNumber
+        {
+            get { return contactNumber; }
+            set { contactNumber = value; }
         }
     }
 }

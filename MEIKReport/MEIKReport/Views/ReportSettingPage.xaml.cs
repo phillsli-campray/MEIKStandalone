@@ -35,6 +35,10 @@ namespace MEIKReport
             {
                 this.logoImg.Source = ImageTools.GetBitmapImage(AppDomain.CurrentDomain.BaseDirectory + "logo.png");                
             }
+            if (App.reportSettingModel.LeftLogo)
+            {
+                this.leftLogoImg.Source = ImageTools.GetBitmapImage(AppDomain.CurrentDomain.BaseDirectory + "leftLogo.png");
+            }
         }
 
         
@@ -65,9 +69,11 @@ namespace MEIKReport
 
                 OperateIniFile.WriteIniData("Report", "Doctor Name Required", App.reportSettingModel.ShowDoctorSignature.ToString(), System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini");
                 OperateIniFile.WriteIniData("Report", "Use Default Logo", App.reportSettingModel.DefaultLogo.ToString(), System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini");
+                OperateIniFile.WriteIniData("Report", "Use Left Logo", App.reportSettingModel.LeftLogo.ToString(), System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini");
                
 			    OperateIniFile.WriteIniData("Report", "Transfer Mode", App.reportSettingModel.TransferMode.ToString(), System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini");
-                OperateIniFile.WriteIniData("Report", "Company Address", App.reportSettingModel.CompanyAddress, System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini");                                            
+                OperateIniFile.WriteIniData("Report", "Company Address", App.reportSettingModel.CompanyAddress, System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini");
+                OperateIniFile.WriteIniData("Report", "Contact Number", App.reportSettingModel.ContactNumber, System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini");                                            
                 
                 OperateIniFile.WriteIniData("Report", "Print Paper", App.reportSettingModel.PrintPaper.ToString(), System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini");
                 OperateIniFile.WriteIniData("Mail", "My Mail Address", App.reportSettingModel.MailAddress, System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini");
@@ -157,6 +163,34 @@ namespace MEIKReport
             {
                 App.reportSettingModel.ToMailAddressList.RemoveAt(this.listToMailAddress.SelectedIndex);
             }
+        }
+
+        private void leftLogoSelectBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var dlg = new Microsoft.Win32.OpenFileDialog() { Filter = "png|*.png" };
+                if (dlg.ShowDialog(this) == true)
+                {
+                    string leftLogoPath = AppDomain.CurrentDomain.BaseDirectory + "leftLogo.png";
+                    this.txtLeftLogoPath.Text = leftLogoPath;
+                    File.Copy(dlg.FileName, leftLogoPath, true);
+                    App.reportSettingModel.LeftLogo = true;
+                    this.leftLogoImg.Source = ImageTools.GetBitmapImage(leftLogoPath);
+                }
+            }
+            catch (Exception)
+            {
+                FileHelper.SetFolderPower(AppDomain.CurrentDomain.BaseDirectory, "Everyone", "FullControl");
+                FileHelper.SetFolderPower(AppDomain.CurrentDomain.BaseDirectory, "Users", "FullControl");
+            }
+        }
+
+        private void leftLogoDefaultBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.txtLeftLogoPath.Text = "";
+            App.reportSettingModel.LeftLogo = false;
+            this.leftLogoImg.Source = null; 
         }        
         
                        

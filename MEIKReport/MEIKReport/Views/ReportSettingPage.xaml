@@ -32,7 +32,7 @@
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0" Margin="10">
                 <TabControl Name="tabSetting" SelectedIndex="0" Background="{x:Null}" BorderBrush="#FF3E6E8F">
-                    <TabItem Name="tabReport" Header="{StaticResource SettingReportTabTitle}" Style="{StaticResource NewTabButtonStyle}" FontSize="14" Width="150" Height="26" HorizontalContentAlignment="Center" Background="#FF768795" Foreground="White">
+                    <TabItem Name="tabReport" Header="{StaticResource SettingReportTabTitle}" Style="{StaticResource NewTabButtonStyle}" FontSize="14" Width="120" Height="26" HorizontalContentAlignment="Center" Background="#FF768795" Foreground="White">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="130"/>
@@ -108,7 +108,7 @@
                             
                         </Grid>
                     </TabItem>
-                    <TabItem Name="tabMail" Header="{StaticResource SettingEmailTabTitle}" Style="{StaticResource NewTabButtonStyle}" FontSize="14" Width="150" Height="26" HorizontalContentAlignment="Center" Background="#FF768795" Foreground="White">
+                    <TabItem Name="tabMail" Header="{StaticResource SettingEmailTabTitle}" Style="{StaticResource NewTabButtonStyle}" FontSize="14" Width="120" Height="26" HorizontalContentAlignment="Center" Background="#FF768795" Foreground="White">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="40"/>
@@ -197,7 +197,7 @@
                             </StackPanel>
                         </Grid>
                     </TabItem>
-                    <TabItem Name="tabImage"  Header="{StaticResource SettingImageTitle}" Style="{StaticResource NewTabButtonStyle}" FontSize="14" Width="150" Height="26" HorizontalContentAlignment="Center" Background="#FF768795" Foreground="White">
+                    <TabItem Name="tabImage"  Header="{StaticResource SettingImageTitle}" Style="{StaticResource NewTabButtonStyle}" FontSize="14" Width="120" Height="26" HorizontalContentAlignment="Center" Background="#FF768795" Foreground="White">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="10"/>
@@ -219,18 +219,50 @@
                             
                         </Grid>
                     </TabItem>
-                    <TabItem Name="tabIcon"  Header="{StaticResource SettingCompanyTitle}" Style="{StaticResource NewTabButtonStyle}" FontSize="14" Width="150" Height="26" HorizontalContentAlignment="Center" Background="#FF768795" Foreground="White">
+                    <TabItem Name="tabLogo"  Header="{StaticResource SettingLeftLogo}" Style="{StaticResource NewTabButtonStyle}" FontSize="14" Width="120" Height="26" HorizontalContentAlignment="Center" Background="#FF768795" Foreground="White">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="210"/>
+                                <RowDefinition Height="20"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="510"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="{StaticResource SettingLeftLogo}" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontWeight="Bold" Foreground="#FF3E6E8F"></Label>
+                            <WrapPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                <TextBox Name="txtLeftLogoPath" Width="250" BorderBrush="#FF3E6E8F"></TextBox>
+                                <Button Name="leftLogoSelectBtn" Height="26" Width="100" Style="{StaticResource NewButtonStyle}" Content="{StaticResource SettingLogoSelect}" Click="leftLogoSelectBtn_Click" ></Button>
+                                <Button Name="leftLogoDefaultBtn" Height="26" Width="100" Style="{StaticResource NewButtonStyle}" Content="{StaticResource SettingLogoDefault}" Click="leftLogoDefaultBtn_Click" ></Button>
+                            </WrapPanel>
+                            <Image Name="leftLogoImg" Grid.Row="2"  Grid.ColumnSpan="2" Source="{x:Null}" Margin="10"></Image>
+
+                        </Grid>
+                    </TabItem>
+                    <TabItem Name="tabIcon"  Header="{StaticResource SettingCompanyTitle}" Style="{StaticResource NewTabButtonStyle}" FontSize="14" Width="120" Height="26" HorizontalContentAlignment="Center" Background="#FF768795" Foreground="White">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="10"/>
                                 <RowDefinition Height="30"/>
-                                <RowDefinition Height="240"/>                                
+                                <RowDefinition Height="140"/>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="50"/>
+                                
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="660"/>                                
                             </Grid.ColumnDefinitions>
                             <Label Grid.Row="1" Content="{StaticResource SettingCompanyInfo}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontWeight="Bold" Foreground="#FF3E6E8F"></Label>
-                            <TextBox Grid.Row="2" Grid.Column="0" Height="150" Width="660" Text="{Binding CompanyAddress}" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBox>                            
+                            <TextBox Grid.Row="2" Grid.Column="0" Height="140" Width="660" Text="{Binding CompanyAddress}" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBox>
+                            <WrapPanel Grid.Row="4">
+                                <Label Content="{StaticResource SettingContactNumber}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontWeight="Bold" Foreground="#FF3E6E8F"></Label>
+                                <TextBox Grid.Row="5" Grid.Column="0"  Width="300" Text="{Binding ContactNumber}"   HorizontalAlignment="Center" VerticalAlignment="Center"></TextBox>
+                            </WrapPanel>
+                            
+                            
                         </Grid>
                     </TabItem>
 

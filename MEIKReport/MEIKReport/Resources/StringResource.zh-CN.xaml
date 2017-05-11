@@ -512,7 +512,7 @@
     <sys:String x:Key="ReportContext_154">3 类 - 疑似良性发现</sys:String>
     <sys:String x:Key="ReportContext_155">4 类 - 疑似恶性发现</sys:String>
     <sys:String x:Key="ReportContext_156">5 类 - 高度可能为恶性</sys:String>
-    <sys:String x:Key="ReportContext_157" xml:space="preserve">建议: </sys:String>
+    <sys:String x:Key="ReportContext_157" xml:space="preserve">深入检查: </sys:String>
     <sys:String x:Key="ReportContext_158">MEIK乳腺电阻抗检测 (三月内)</sys:String>
     <sys:String x:Key="ReportContext_159">MEIK乳腺电阻抗检测 (六月内)</sys:String>
     <sys:String x:Key="ReportContext_160">MEIK乳腺电阻抗检测 (年度)</sys:String>
@@ -550,7 +550,7 @@
     <sys:String x:Key="ReportContext_186">Probably benign findings</sys:String>
     <sys:String x:Key="ReportContext_187">疑似恶性变更</sys:String>-->
     <sys:String x:Key="ReportContext_188" xml:space="preserve">部位: </sys:String>
-    <sys:String x:Key="ReportContext_189" xml:space="preserve">深入检查: </sys:String>
+    <sys:String x:Key="ReportContext_189" xml:space="preserve">建议: </sys:String>
     <sys:String x:Key="ReportContext_190">日期</sys:String>
     <sys:String x:Key="ReportContext_191" xml:space="preserve">MEIK检测员: </sys:String>
     <sys:String x:Key="ReportContext_192" xml:space="preserve">大小: </sys:String>

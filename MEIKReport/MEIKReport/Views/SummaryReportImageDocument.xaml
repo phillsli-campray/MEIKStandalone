@@ -57,6 +57,7 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="0.4*"/>
                 </Grid.RowDefinitions>
+                <Image Name="imgLeftLog" Source="{x:Null}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4"></Image>
                 <Image Name="imgTitleLog" Source="/Images/title.png" Grid.Row="1" Grid.Column="1"></Image>
                 <Image Source="/Images/logo.png" Grid.Row="0" Grid.Column="2" Grid.RowSpan="4"></Image>
                 <TextBlock Text="{StaticResource ReportContext_197}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="21" Foreground="#e35094"/>
@@ -163,7 +164,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="17" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-                <TextBlock Text="For further consultation pls. contact Nuvotek at 0947-766-2952 to make an appt." Foreground="#415661" FontStyle="Italic" FontWeight="Bold"/>
+                <TextBlock Name="resultNotes" Text="{StaticResource ReportContext_243}" Foreground="#415661" FontStyle="Italic" FontWeight="Bold"/>
             </StackPanel>
             <Border Grid.Row="19" BorderBrush="Black" BorderThickness="0,1,0,2">
             </Border>

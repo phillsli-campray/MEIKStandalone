@@ -67,6 +67,22 @@ namespace MEIKReport
                             topImage.Source = ImageTools.GetBitmapImage(AppDomain.CurrentDomain.BaseDirectory + "logo.png");
                         }                        
                     }
+
+                    var imgLeftLog = doc.FindName("imgLeftLog") as Image;
+                    if (imgLeftLog != null)
+                    {
+                        if (App.reportSettingModel.LeftLogo && File.Exists(AppDomain.CurrentDomain.BaseDirectory + "leftLogo.png"))
+                        {
+                            imgLeftLog.Source = ImageTools.GetBitmapImage(AppDomain.CurrentDomain.BaseDirectory + "leftLogo.png");
+                        }
+                    }
+
+                    var resultTxt = doc.FindName("resultNotes") as TextBlock;
+                    if (resultTxt != null && App.reportSettingModel.ContactNumber != null)
+                    {
+                        resultTxt.Text = string.Format(App.Current.FindResource("ReportContext_243").ToString(), App.reportSettingModel.ContactNumber);
+                    }
+
                     var footTxt = doc.FindName("footTxt") as TextBlock;
                     if (footTxt != null)
                     {
