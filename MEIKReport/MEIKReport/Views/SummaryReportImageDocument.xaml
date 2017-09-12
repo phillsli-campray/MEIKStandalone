@@ -177,8 +177,8 @@
                     <TextBlock Name="dataTechLicenseNo" Text="{Binding DataTechLicense}" Width="200"  VerticalAlignment="Center"/>
                 </StackPanel>
                 <StackPanel Name="doctorSignPanel" Height="20" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <TextBlock Text="{StaticResource ReportContext_173}" Margin="20,0,10,0" FontWeight="Bold" VerticalAlignment="Center"/>
-                    <TextBlock Name="dataDoctor" Text="{Binding DataDoctor}" Width="187"  VerticalAlignment="Center"/>
+                    <TextBlock Text="{StaticResource ReportContext_173}" Margin="20,0,70,0" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <TextBlock Name="dataDoctor" Text="{Binding DataDoctor}" Width="206"  VerticalAlignment="Center"/>
                     <TextBlock Text="{StaticResource ReportContext_200}"  FontWeight="Bold"  VerticalAlignment="Center" Margin="0,0,10,0"/>
                     <TextBlock Name="dataDoctorLicenseNo" Text="{Binding DataDoctorLicense}" Width="200"  VerticalAlignment="Center"/>
                 </StackPanel>

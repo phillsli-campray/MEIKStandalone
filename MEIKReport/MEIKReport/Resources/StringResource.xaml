@@ -568,7 +568,7 @@
     <sys:String x:Key="ReportContext_191" xml:space="preserve">MEIK Technician: </sys:String>
     <sys:String x:Key="ReportContext_192">Size:</sys:String>
     <sys:String x:Key="ReportContext_193">The above described results are based on interpretations at the time of the scan and must be correlated with previous mammogram and ultrasound results (if any), clinical history, clinical findings and other ancillary procedures.</sys:String>
-    <sys:String x:Key="ReportContext_194">*MEIK is a Digital Breast Exam (DBE) screening procedure and is an adjunct modality for the Cinical Breast Wxam, Mammography &amp; Breast Ultrasound.</sys:String>
+    <sys:String x:Key="ReportContext_194">*MEIK is a Digital Breast Exam (DBE) screening procedure and is an adjunct modality for the Cinical Breast Exam, Mammography &amp; Breast Ultrasound.</sys:String>
     <sys:String x:Key="ReportContext_195">*Green marks indicate benign findings and red marks indicate suspicious changes</sys:String>
     <sys:String x:Key="ReportContext_196">PATIENT'S MEIK RESULT</sys:String>
     <sys:String x:Key="ReportContext_197">MEIK DIGITAL BREAST SCREENING REPORT</sys:String>
