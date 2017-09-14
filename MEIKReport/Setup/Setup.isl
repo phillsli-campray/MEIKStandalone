@@ -3463,6 +3463,7 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME16</td><td>1033</td><td>LAUNCH~1.EXE|Launch gxpswin32.exe</td><td>0</td><td/><td>1386589872</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME17</td><td>1033</td><td>MEIKReport.exe</td><td>0</td><td/><td>1386548944</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME18</td><td>1033</td><td>Uninstall</td><td>0</td><td/><td>1386575568</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME19</td><td>1033</td><td>Uninstall</td><td>0</td><td/><td>1655006443</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>MEIKReport</td><td>0</td><td/><td>-1515920788</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>Uninstall</td><td>0</td><td/><td>-1515955572</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>Uninstall</td><td>0</td><td/><td>-1381714540</td></row>
@@ -3893,7 +3894,7 @@
 		<row><td>MEIKReport.exe_9B64BB66D4C041989A3AD5FCFC16DCFA.exe</td><td/><td>D:\NewGit\MEIK_Standalone\MEIKReport\MEIKReport\bin\Release\MEIKReport.exe</td><td>0</td></row>
 		<row><td>MEIKReport.exe_B993B8B1000F4107AF270A2929DAFEBA.exe</td><td/><td>D:\NewGit\MEIKStandalone\MEIKReport\MEIKReport\bin\Release\MEIKReport.exe</td><td>0</td></row>
 		<row><td>MEIKReport.vshost._04067EB036ED4E8EB3B187D76EC7D192.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
-		<row><td>UNINST_Uninstall_M_48049C5112CD414C934424C6CD3D78FF.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
+		<row><td>UNINST_Uninstall_M_18C6499569434956806479FAE57EC01C.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -4408,9 +4409,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]MEIKReport.exe</td><td/></row>
-		<row><td>ProductCode</td><td>{CC937626-02D6-473C-8A9E-67E301CA9A87}</td><td/></row>
+		<row><td>ProductCode</td><td>{FCDBD9AF-DCFC-4D99-AC0B-2E9755E9BB5E}</td><td/></row>
 		<row><td>ProductName</td><td>MEIKReport</td><td/></row>
-		<row><td>ProductVersion</td><td>1.1.2</td><td/></row>
+		<row><td>ProductVersion</td><td>1.1.3</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4576,7 +4577,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="I4">ISAttributes</col>
 		<row><td>MEIKReport.exe</td><td>meikre_1_meikreport</td><td>##IDS_SHORTCUT_DISPLAY_NAME17##</td><td>MEIKReport.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>MEIKReport.exe_B993B8B1000F4107AF270A2929DAFEBA.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>MEIKReport.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME17##</td><td>MEIKReport.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>MEIKReport.exe1_494C6D95683E4BE98ACAE626E796D002.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>UNINST_Uninstall_MEIKReport</td><td>meikre_1_meikreport</td><td>##IDS_SHORTCUT_DISPLAY_NAME18##</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {7CF25254-FB21-43FA-994E-041027662D9A}</td><td/><td/><td>UNINST_Uninstall_M_48049C5112CD414C934424C6CD3D78FF.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>UNINST_Uninstall_MEIKReport</td><td>meikre_1_meikreport</td><td>##IDS_SHORTCUT_DISPLAY_NAME19##</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {FCDBD9AF-DCFC-4D99-AC0B-2E9755E9BB5E}</td><td/><td/><td>UNINST_Uninstall_M_18C6499569434956806479FAE57EC01C.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
